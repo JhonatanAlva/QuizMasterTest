@@ -1,0 +1,241 @@
+.boton.uno span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+.boton.dos span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+.boton.tres span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+.boton.cuatro span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+.boton.cinco span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+.boton.seis span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+
+.boton.siete span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 40%;
+}
+
+
+.boton.uno .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+.boton.dos .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+.boton.tres .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+.boton.cuatro .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+.boton.cinco .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+.boton.seis .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+
+.boton.siete .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+
+
+
+.boton.uno svg {
+	color: #fff;
+	width: auto;
+	height: 35px;
+}
+.boton.dos svg {
+	color: #fff;
+	width: auto;
+	height: 35px;
+}
+.boton.tres svg {
+	color: #fff;
+	width: auto;
+	height: 35px;
+}
+.boton.cuatro svg {
+	color: #fff;
+	width: auto;
+	height: 35px;
+}
+.boton.cinco svg {
+	color: #fff;
+	width: auto;
+	height: 35px;
+}
+.boton.seis svg {
+	color: #fff;
+	width: auto;
+	height: 35px;
+}
+.boton.siete svg {
+	color: #fff;
+	width: auto;
+	height: 35px;
+}
+
+
+
+.boton.uno:hover {
+	background: #ff8a05;
+	background-image: url("img/hist.jpg");
+	height: 85px;
+	width: auto;
+	
+}
+.boton.dos:hover {
+	background: #ff8a05;
+	background-image: url("img/geog.jpg");
+	height: 85px;
+	width: auto;
+	
+}
+.boton.tres:hover {
+	background: #ff8a05;
+	background-image: url("img/fisica.jpg");
+	height: 85px;
+	width: auto;
+
+}
+.boton.cuatro:hover {
+	background: #ff8a05;
+	background-image: url("img/mat.jpg");
+	height: 85px;
+	width: auto;
+
+}
+.boton.cinco:hover {
+	background: #ff8a05;
+	background-image: url("img/dep.jpg");
+	height: 85px;
+	width: auto;
+
+}
+.boton.seis:hover {
+	background: #ff8a05;
+	background-image: url("img/bio.jpg");
+	height: 85px;
+	width: auto;
+
+}
+
+
+
+
+.boton.uno:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+.boton.dos:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+.boton.tres:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+.boton.cuatro:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+.boton.cinco:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+.boton.seis:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+
+.boton.siete:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+
+
+.boton.uno:hover span {
+	left: 20px;
+}
+.boton.dos:hover span {
+	left: 20px;
+}
+.boton.tres:hover span {
+	left: 20px;
+}
+.boton.cuatro:hover span {
+	left: 20px;
+}
+.boton.cinco:hover span {
+	left: 20px;
+}
+.boton.seis:hover span {
+	left: 20px;
+}
+.boton.siete:hover span {
+	left: 20px;
+}

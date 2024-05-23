@@ -1,0 +1,21 @@
+.audButton {
+	padding: 15px 15px;
+	font-size: 16px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	background-color: #f8cb4e;
+	color: white;
+  }
+  
+.audButton {
+    position: fixed;
+    top: 20px;
+    right: 78px;
+}
+.audButton:hover {
+	background-color: #fab908;
+  }
+  
+
+

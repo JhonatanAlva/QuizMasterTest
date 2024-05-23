@@ -1,0 +1,271 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    background-size: cover;
+    background-position: center; 
+  }
+/*** ESTILOS BOTÓN GROW ELLIPSE ***/
+.ov-btn-grow-ellipse {
+  background: #fff; 
+  color: #4741d7;
+  border: 2px solid #4741d7; 
+  padding: 10px 10px;
+  border-radius: 3px; 
+  overflow: hidden;
+  display: inline-block;
+  position: fixed;
+  top: 2px;
+  right: 10px;
+  z-index: 9999;
+}
+.ov-btn-grow-ellipse:hover {
+  color: #fff;/* color de fuente hover */
+}
+.ov-btn-grow-ellipse::after {
+  content: "";
+  background: #4741d7; 
+  position: absolute;
+  z-index: -1;
+  padding: 10px 10px;
+  display: block;
+  border-radius: 50%;
+  left: -50%;
+  right: -50%;
+  top: -150%;
+  bottom: -150%;
+  transform: scale(0, 0);
+  transition: all 0.4s ease;
+}
+.ov-btn-grow-ellipse:hover::after {
+  transition: all 0.6s ease-out;
+  transform: scale(1, 1);
+}
+/* Estilos para el marco central */
+#centerFrame {
+  width: 80%; /* Ancho del elemento */
+  margin: auto; /* Centra horizontalmente */
+  padding: 20px;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA); 
+  border: 1px solid #701d1d;
+  height: 400px;
+  border-radius: 5px;
+  margin-top: 90px;
+  position: relative;
+}
+
+  /* Estilos para los corazones en el contenedor de vidas */
+#vidas {
+  font-size: 24px; 
+  color: red; 
+}
+
+#footer {
+  background-color: #333; 
+  color: white; 
+  padding: 20px; 
+  text-align: center; 
+}
+
+
+#juego {
+  text-align: center;
+}
+
+#juego h2 {
+  color: #000000; 
+  margin-bottom: 20px; 
+}
+
+#juego button {
+  background-color: #007bff; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  margin: 5px; 
+  cursor: pointer; 
+}
+
+#juego button:hover {
+  background-color: #0056b3; 
+}
+
+.progress-container {
+  position: absolute; 
+  bottom: 50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progress {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  width: 570px;
+  height: 30px;
+  overflow: hidden;
+  background-color: #D8D8D8;
+  border-radius: 20px;
+}
+
+progress::-moz-progress-bar {
+  background: rgba(255, 175, 75, 1);
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #D8D8D8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  background: rgba(255, 175, 75, 1);
+  border-radius: 20px;
+}
+
+.progress span {
+  font-weight: bold;
+}
+.name-player{
+	position: fixed;
+	padding: 10px ;
+	top: 2px;
+	left: 10px;
+	font-size: 20px;
+	color: #030303;
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA); 
+	border: 2px solid #055dff;
+	border-radius: 10px;
+}
+.fichasplayer {
+	display: inline-flex; 
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA); 
+	padding: 10px;
+	border: 2px solid #ff8800;
+	border-radius: 10px;
+	position: fixed;
+	top: 2px;
+	right: 150px; 
+	align-items: center; 
+}
+
+#totalFichas img {
+	margin-right: 5px; 
+}
+
+#totalFichas p {
+	margin-right: 10px;
+	margin-bottom: 0;
+}
+#totalFichas button {
+	padding: 3px 5px;
+}
+
+.vidas-container {
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px; 
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.corazon {
+  width: 24px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-contenido {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  width: 60%;
+  text-align: center;
+  position: relative;
+}
+
+#cerrarModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #ff0000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#GAMEOVER {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.text, .conteoRes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.text > p, .conteoRes > p {
+  margin: 0;
+  flex: 1;
+}
+
+#correctas {
+  background-color: rgb(13, 207, 13);
+  padding: 5px;
+}
+
+#incorrectas {
+  background-color: rgb(236, 22, 22);
+  padding: 5px;
+}
+
+.audButton {
+	padding: 15px 15px;
+	font-size: 16px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	background-color: #f8cb4e;
+	color: white;
+  }
+  
+.audButton {
+    position: fixed;
+    top: 3px;
+    right: 88px;
+}
+.audButton:hover {
+	background-color: #fab908;
+  }

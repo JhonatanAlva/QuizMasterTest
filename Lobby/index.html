@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="button.css">
+	<link rel="stylesheet" href="aud.css">
+
+	<title>Lobby Quiz Master</title>
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div class="salir">
+		<button class="exit" id="regresarLobby">
+			<i class="bx bx-exit">Salir</i>
+		</button>
+	</div>
+	<div id="name-player" class="name-players">
+		<h1></h1>
+	</div>
+	<div id="totalFichas" class="fichasplayer">
+		<img src="/Lobby/img/dolar.png" alt="" height="30">
+		<p id="fichas-cantidad"> </p>
+		<button id="add-fichas" type="button" class="btn btn-success">+</button>
+	</div>
+	<audio id="audio" src="/Lobby/aud/beta.mp3" loop></audio>
+	<button class="audButton" id="toggleButton"><img id="controller-aud" src="/Lobby/img/volume-full-regular-24.png"
+			alt=""></button>
+	<div class="contenedor">
+		<div class="contenedores">
+			<h1>QUIZ MASTER</h1>
+			<div class="contenedor-botones">
+				<button class="boton uno" id="Historia">
+					<div class="icono">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+						</svg>
+					</div>
+					<span>HISTORIA</span>
+				</button>
+				<button class="boton dos" id="Geografia">
+					<div class="icono">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+						</svg>
+					</div>
+					<span>GEOGRAFIA</span>
+				</button>
+				<button class="boton tres" id="Fisica">
+					<div class="icono">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+						</svg>
+					</div>
+					<span>FISICA</span>
+				</button>
+				<button class="boton cuatro" id="Matematicas">
+					<div class="icono">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+						</svg>
+					</div>
+					<span>MATEMATICAS</span>
+				</button>
+				<button class="boton cinco" id="Deportes">
+					<div class="icono">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+						</svg>
+					</div>
+					<span>DEPORTES</span>
+				</button>
+				<button class="boton seis" id="Biologia">
+					<div class="icono">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+						</svg>
+					</div>
+					<span>BIOLOGIA</span>
+				</button>
+				
+			</div>
+		</div>
+		<div class="modorandom">
+			<button class="boton siete" id="Randon">
+				<span>Modo aleatorio</span>
+			</button>
+		</div>
+		<div id="modal" class="modal">
+			<div class="modal-contenido">
+				<h2>Selecciona la dificultad:</h2>
+				<button id="cerrarModal">X</button>
+				<button class="dificultad" id="Facil">Fácil</button>
+				<button class="dificultad" id="Intermedia">Intermedio</button>
+				<button class="dificultad" id="Dificil">Difícil</button>
+			</div>
+		</div>
+</body>
+
+</html>

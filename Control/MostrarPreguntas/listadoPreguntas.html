@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Preguntas</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link" href="/Control/PanelControl/PanelControl.html">Ingresar preguntas</a>
+              <a class="nav-link" href="/Control/MostrarPreguntas/listadoPreguntas.html">Listar preguntas categoria</a>
+              <a class="nav-link" href="/LoginQuiz/index.html">Salir</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="buscardor d-flex justify-content-center">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <form class="d-flex" id="searchForm">
+                <select class="form-select me-2" id="buscadorCategoria" aria-label="Categoría">
+                  <option value="" selected>Selecciona una categoría...</option>
+              </select>
+                <input class="form-control me-2" id="buscadorDificultad" type="search" placeholder="Dificultad" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </div>
+          </nav>
+    </div>
+    <div class="forms-pregunt">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pregunta</th>
+                    <th>Respuesta</th>
+                    <th>Categoría</th>
+                    <th>Subcategoría</th>
+                    <th>Dificultad</th>
+                    <th>Acciones</th> 
+                </tr>
+            </thead>
+            <tbody class="preguntas">
+                
+            </tbody>
+        </table>
+    </div> 
+    <div id="modalModificar" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h2>Modificar Pregunta</h2>
+        <form class="forms" id="formModificar" onsubmit="guardarCambios(event)">
+          <label for="preguntaInput">Pregunta:</label>
+          <input type="text" id="preguntaInput" name="preguntaInput">
+          <label for="respuestaInput">Respuesta:</label>
+          <input type="text" id="respuestaInput" name="respuestaInput">
+          <label for="categoriaInput">Categoría:</label>
+          <input type="text" id="categoriaInput" name="categoriaInput">
+          <label for="subcategoriaInput">Subcategoría:</label>
+          <input type="text" id="subcategoriaInput" name="subcategoriaInput">
+          <label for="dificultadInput">Dificultad:</label>
+          <input type="text" id="dificultadInput" name="dificultadInput">
+          <button class="btn btn-success" type="submit">Guardar</button>
+          <button class="btn btn-danger" type="button" onclick="cerrarModal()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+      
+</body>
+</html>
